@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import Navbar from "./Navbar";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-import "./preview.css";
+import "./Preview.css";
 // const sample = [
 //     {
 //       "question_no": 1,
