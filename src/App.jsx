@@ -7,7 +7,7 @@ import Manage from "./components/Manage";
 import Create from "./components/Create";
 import Profile from "./components/Profile";
 import Quiz from "./components/Quiz";
-import Preview from "./components/preview";
+import Preview from "./components/Preview";
 import Edit from "./components/Edit";
 import FeedbackDisplay from "./components/Feedback";
 import User from "./components/User";
