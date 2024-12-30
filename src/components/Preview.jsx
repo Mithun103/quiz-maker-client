@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import Button from '@mui/material/Button';
-import './preview.css';
+import './Preview.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
