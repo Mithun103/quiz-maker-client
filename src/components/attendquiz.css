@@ -1,0 +1,36 @@
+.manage {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.all-quizzes {
+  margin-top: 2rem;
+}
+
+.quiz-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.quiz-item span {
+  margin-right: 1rem;
+}
+
+.quiz-actions {
+  display: flex;
+  gap: 1rem;
+}
+  

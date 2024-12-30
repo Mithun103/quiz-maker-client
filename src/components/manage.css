@@ -1,0 +1,28 @@
+.cardlist{
+    display: flex;
+}
+.manage{
+    padding: 20px 30px;
+    h2{
+        margin-bottom: 10vh;
+    }
+}
+.quizitem{
+    margin:  0 auto;
+    width:20vw;
+}
+.questions-list {
+    margin-top: 2rem;
+}
+
+.question-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.question-item .MuiTextField-root {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}

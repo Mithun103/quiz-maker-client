@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #FFF0DC;
+    font-family: "Montserrat";
+
+}
+.links{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+.links a{
+    color: wheat;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat",sans-serif;
+}
+nav{
+    padding: 1%;
+    background-color: #3E5879;
+    display: flex;
+    justify-content: space-between;
+}
+nav p{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    width: 50%;
+    font-family: "Sacramento",sans-serif;
+}
+nav img{
+    width: 10%;
+    border-radius: 10%;
+    margin-right: -40px;
+}

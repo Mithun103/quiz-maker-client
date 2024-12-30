@@ -1,0 +1,18 @@
+.create{
+    margin: 10vh 5vw;
+    h2{
+        font-family: "Montserrat";
+        color: #3E5879;
+        font-family: 1.4rem;
+    }
+    p{
+        margin: 2vh 1vw;
+        font-size: 1.1rem;
+    }
+}
+.fileup{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
