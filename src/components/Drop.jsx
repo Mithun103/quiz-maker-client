@@ -99,7 +99,7 @@ import "./Preview.css";
 //   ]
 
 const fileTypes = ["PDF"];
-const baseURL = "http://localhost:5000/api/upload_quiz"; // Replace with your backend URL
+const baseURL = "https://quiz-maker-backend-1lkn.onrender.com/api/upload_quiz"; // Replace with your backend URL
 
 function QuizUploaderAndPreview() {
   const [file, setFile] = useState(null);
