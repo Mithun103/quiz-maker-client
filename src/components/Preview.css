@@ -1,4 +1,33 @@
-    .questions{
-    margin: 10vh;
-    margin-top: 1300px;
+.questions {
+  width: clamp(300px, 95%, 1200px);
+  margin: 1rem auto;
+  margin-top: clamp(140vh, 160vh, 190vh);
+  padding: clamp(1rem, 2vw, 2rem);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: clamp(6px, 1vw, 8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Styles */ 
+@media screen and (max-width: 992px) {
+  .questions {
+    margin-bottom: 140vh;
+    padding: clamp(1rem, 1.5vw, 1.5rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .questions {
+    margin-top: 100vh;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .questions {
+    width: 95%;
+    margin-top: 2800px;
+    padding: 0.8rem;
+  }
 }
