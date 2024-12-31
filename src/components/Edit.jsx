@@ -112,7 +112,7 @@ function EditDelete() {
     const id = path.split('/').pop();
     if (id) {
         setQuizId(id);
-        axios.get(`http://127.0.0.1:5000/api/manage/quiz/${id}`)
+        axios.get(`https://quiz-maker-backend-1lkn.onrender.com/api/manage/quiz/${id}`)
             .then(response => {
                 if (response.data.success) {
                     const { questions } = response.data.quiz;
@@ -137,7 +137,7 @@ function EditDelete() {
         return;
     }
 
-    axios.put(`http://127.0.0.1:5000/api/manage/quiz/${quizId}/question/${index}`, editedQuestion)
+    axios.put(`https://quiz-maker-backend-1lkn.onrender.com/api/manage/quiz/${quizId}/question/${index}`, editedQuestion)
         .then(response => {
             if (response.data.success) {
                 const updatedQuestions = [...questions];
@@ -177,7 +177,7 @@ function EditDelete() {
         ...questions
     ];
 
-    axios.put(`http://127.0.0.1:5000/api/manage/quiz/${quizId}`, {
+    axios.put(`https://quiz-maker-backend-1lkn.onrender.com/api/manage/quiz/${quizId}`, {
         questions: updatedQuestions
     })
     .then(response => {
