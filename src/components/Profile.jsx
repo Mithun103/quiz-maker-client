@@ -15,7 +15,7 @@ function Profile() {
                     throw new Error('Not logged in');
                 }
                 
-                const response = await fetch('http://localhost:5000/api/profile', {
+                const response = await fetch('https://quiz-maker-backend-1lkn.onrender.com/api/profile', {
                     method: 'GET',
                     headers: {
                         'username': username,
