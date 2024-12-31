@@ -147,7 +147,7 @@ function QuizUploaderAndPreview() {
     <div>
       {questions.length === 0 ? (
         <div>
-          <h2>Upload a Quiz File</h2>
+          <h2>Upload your PDF to generate Quiz.(eg.Book,lecture Notes,guides etc.</h2>
           <FileUploader
             handleChange={handleFileChange}
             multiple={false}
