@@ -12,7 +12,7 @@ function Preview() {
     const fetchQuestions = async () => {
       try {
         // Send a POST request instead of GET
-        const response = await axios.post('http://localhost:5000/api/upload_quiz/uploadfile', {
+        const response = await axios.post('https://quiz-maker-backend-1lkn.onrender.com/api/upload_quiz/uploadfile', {
           // Include any required payload if needed
         });
         if (response.data.questions) {
