@@ -10,7 +10,7 @@ function CreateCN({ path,baseURL }) {
             <Navbar />
             <div className='create'>
                 <h2>Creation of Quiz</h2>
-                <p>Upload A PDF about the content on which u have to create quiz</p>
+{/*                 <p>Upload A PDF about the content on which u have to create quiz</p> */}
                 <div className="fileup">
                     <DragDrop/>
                 </div>
