@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import Button from '@mui/material/Button';
-import './Preview.css';
+import './preview.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -45,27 +45,30 @@ function Preview() {
   return (
     <>
       <Navbar />
-      <div className="edit-delete-container">
+      <div className="preview-container">
         <h2>Preview Quiz</h2>
         {questions.length > 0 ? (
           questions.map((q, index) => (
             <div key={q.question_no} className="question-item">
-              <div>
+              <div className="question-content">
                 <b>{index + 1}. {q.question}</b>
-                <ul>
+                <ul className="options-list">
                   {['A', 'B', 'C', 'D'].map(option => (
-                    <li key={option}>
-                      <label style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <li key={option} className="option-item">
+                      <label>
                         <input
                           type="radio"
                           name={`question-${q.question_no}`}
                           value={q[option]}
+                          disabled
                         />
                         {option}: {q[option]}
                       </label>
                     </li>
                   ))}
-                  <li><b>Correct Answer: {q.correct_answer}</b></li>
+                  <li className="option-item correct-answer">
+                    <b>Correct Answer: {q.correct_answer}</b>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -73,24 +76,26 @@ function Preview() {
         ) : (
           <p>Loading questions...</p>
         )}
-        <Button 
-          variant="contained" 
-          color="success" 
-          onClick={handleSave}
-          sx={{ marginRight: "1rem" }}
-        >
-          Save
-        </Button>
-        <Button 
-          variant="contained" 
-          color="error" 
-          onClick={() => navigate('/manage')}
-        >
-          Edit And Delete
-        </Button>
+        <div className="button-container">
+          <Button 
+            variant="contained" 
+            color="success" 
+            onClick={handleSave}
+          >
+            Save
+          </Button>
+          <Button 
+            variant="contained" 
+            color="error" 
+            onClick={() => navigate('/manage')}
+          >
+            Edit And Delete
+          </Button>
+        </div>
       </div>
     </>
   );
 }
 
 export default Preview;
+
