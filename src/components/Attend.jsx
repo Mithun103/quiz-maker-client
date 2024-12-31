@@ -10,7 +10,7 @@ function AttendQuiz() {
   const [quizzes, setQuizzes] = useState([]);
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:5000/api/getquizzes')
+    axios.get('https://quiz-maker-backend-1lkn.onrender.com/api/getquizzes')
       .then(response => {
         if (response.data.success) {
           setQuizzes(response.data.quizzes || []);
