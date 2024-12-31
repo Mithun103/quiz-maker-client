@@ -11,7 +11,7 @@ const Quiz = ({ setFeedback }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.post(`http://127.0.0.1:5000/api/getquizzes`, { id })
+    axios.post(`https://quiz-maker-backend-1lkn.onrender.com/api/getquizzes`, { id })
       .then(response => {
         console.log("API response:", response.data); // Debugging
         setQuestions(response.data.questions || []); // Set questions if available
@@ -37,7 +37,7 @@ const Quiz = ({ setFeedback }) => {
       user_answer: userAnswers[q.question_no] || ''
     }));
 
-    axios.post(`http://127.0.0.1:5000/api/quizzes/${id}/submit`, { answers })
+    axios.post(`https://quiz-maker-backend-1lkn.onrender.com/api/quizzes/${id}/submit`, { answers })
       .then(response => {
         alert('Answers submitted successfully!');
         console.log(response.data);
