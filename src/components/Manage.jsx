@@ -15,7 +15,7 @@ function Manage() {
     }, []); 
 
     const fetchQuizzes = () => {
-        axios.get('http://127.0.0.1:5000/api/manage/quizzes')
+        axios.get('https://quiz-maker-backend-1lkn.onrender.com/api/manage/quizzes')
             .then(response => {
                 if (response.data.success) {
                     setQuizzes(response.data.quizzes);
@@ -28,7 +28,7 @@ function Manage() {
 
     const handleSearch = () => {
         if (quizId.trim() !== '') {
-            axios.get(`http://127.0.0.1:5000/api/manage/quiz/${quizId}`)
+            axios.get(`https://quiz-maker-backend-1lkn.onrender.com/api/manage/quiz/${quizId}`)
                 .then(response => {
                     if (response.data.success) {
                         setQuiz(response.data.quiz);
@@ -57,7 +57,7 @@ function Manage() {
             return;
         }
         if (window.confirm('Are you sure you want to delete this quiz?')) {
-            axios.delete(`http://127.0.0.1:5000/api/manage/quiz/${id}`)
+            axios.delete(`https://quiz-maker-backend-1lkn.onrender.com/api/manage/quiz/${id}`)
                 .then(response => {
                     if (response.data.success) {
                         alert('Quiz deleted successfully');
@@ -79,7 +79,7 @@ function Manage() {
             return;
         }
 
-        axios.put(`http://127.0.0.1:5000/api/manage/quiz/${id}`, quiz)
+        axios.put(`https://quiz-maker-backend-1lkn.onrender.com/api/manage/quiz/${id}`, quiz)
             .then(response => {
                 if (response.data.success) {
                     alert('Quiz saved successfully');
